@@ -16,7 +16,8 @@ module.exports = {
   adduser: function(req, res) {
 
     var mymodel = db.MyModel({
-      name: 'Chintan'
+      name: 'Android',
+      email: "chinatn@whlig.com"
     });
 
     mymodel.save(function(err, mymodel) {
@@ -34,7 +35,7 @@ module.exports = {
   },
 
   getusers: function(req, res) {
-console.log(db.MyModel);
+    //console.log(db.MyModel);
     db.MyModel.find({}, function(err, mymodel2) {
 
       if (err) {
@@ -46,8 +47,8 @@ console.log(db.MyModel);
       } else {
         res.json(mymodel2)
       }
-      
+
     });
-    
+
   }
 };

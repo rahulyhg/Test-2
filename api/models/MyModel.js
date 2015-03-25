@@ -8,6 +8,7 @@
 module.exports = {
 
   attributes: {
-    name: "String"
+    name: String,
+	email: String
   }
 };
