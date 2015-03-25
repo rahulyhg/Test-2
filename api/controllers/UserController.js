@@ -31,6 +31,16 @@ module.exports = {
 
 
     });
+  },
+
+  getusers: function(req, res) {
+    db.MyModel.find(function(err, mymodel) {
+
+      if (err) return console.error(err);
+      console.log(mymodel)
+
+    });
   }
+
 
 };
