@@ -5,7 +5,7 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
-var db = require('../services/db.js');
+
 
 module.exports = {
   hi: function(req, res) {
@@ -16,7 +16,7 @@ module.exports = {
   adduser: function(req, res) {
 
     var mymodel = db.MyModel({
-      name: 'Test'
+      name: 'Chintan'
     });
 
     mymodel.save(function(err, mymodel) {
@@ -34,13 +34,20 @@ module.exports = {
   },
 
   getusers: function(req, res) {
-    db.MyModel.find(function(err, mymodel) {
+console.log(db.MyModel);
+    db.MyModel.find({}, function(err, mymodel2) {
 
-      if (err) return console.error(err);
-      console.log(mymodel)
-
+      if (err) {
+        console.log("There is an error");
+        console.error(err);
+        res.json({
+          error: "there is an error"
+        });
+      } else {
+        res.json(mymodel2)
+      }
+      
     });
+    
   }
-
-
 };

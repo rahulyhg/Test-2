@@ -1,18 +1,13 @@
 /**
- * MyModel
+ * User.js
  *
- * @module      :: Model
- * @description :: Just to try mongoose
+ * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @docs        :: http://sailsjs.org/#!documentation/models
  */
 
-module.exports = function(mongoose) {
+module.exports = {
 
-  var schema = new mongoose.Schema({
-
-    name: String
-
-  })
-
-  return mongoose.model('MyModel', schema)
-
-}
+  attributes: {
+    name: "String"
+  }
+};
