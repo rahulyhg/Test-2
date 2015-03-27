@@ -23,7 +23,8 @@
     "grunt-contrib-less": "0.11.1",
     "grunt-contrib-coffee": "~0.10.1",
     "mongoose": "~3.8.0",
-    "glob": "~5.0.3"
+    "glob": "~5.0.3",
+    "sails-generate-auth": "0.3.0"
   },
   "scripts": {
     "start": "node app.js",
