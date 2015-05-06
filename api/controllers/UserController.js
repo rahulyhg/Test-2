@@ -12,7 +12,6 @@ module.exports = {
     return res.send("Hi there!");
   },
 
-
   adduser: function(req, res) {
 
     var mymodel = db.MyModel({
